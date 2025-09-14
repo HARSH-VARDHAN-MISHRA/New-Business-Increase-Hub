@@ -1,0 +1,208 @@
+/* Marquee 1---------------------------------- */
+.marquee-area {
+    position: relative;
+    min-height: 235px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        top: 70px;
+        height: 101px;
+        background-color: $theme-color;
+    }
+
+    &.style3 {
+        min-height: 300px;
+        position: relative;
+        z-index: 2;
+        &:before ,
+        &:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            height: 50%;
+
+        }
+        &:before {
+            top: 0;
+            background-color: $smoke-color2;
+
+        }
+        &:after {
+            top: unset;
+            bottom: 0;
+            background-color: $white-color;
+        }
+
+        
+
+        .marquee-content {
+            background-color: $title-color;
+            margin: 0 -7px;
+            transform: rotate(-2deg);
+        }
+    }
+
+}
+
+.marquee-content {
+    position: relative;
+    background-color: $white-color;
+    padding: 37px 0;
+    transform: rotate(-4deg);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.marquee {
+    position: relative;
+    --duration: 120s;
+    --gap: 35px;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+
+    &:first-child {
+        --duration: 100s;
+    }
+
+    &:last-child {
+        --duration: 80s;
+    }
+
+    &.marquee--reverse {
+        .marquee-group {
+            --gap: 35px;
+            animation-direction: reverse;
+        }
+    }
+
+    .marquee-group {
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: distribute;
+        justify-content: flex-start;
+        gap: var(--gap);
+        animation: scroll var(--duration) linear infinite;
+
+        &.style2 {
+            .item {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .video-img {
+                position: relative;
+                z-index: 2;
+                border-radius: 30px;
+                transform: rotate(-4deg);
+
+
+                .play-btn {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 3;
+
+                    &:before,
+                    &:after {
+                        display: none;
+                    }
+
+                    i {
+                        font-size: 14px;
+                        color: $white-color;
+                        background-color: transparent;
+                    }
+                }
+
+                img {
+                    position: relative;
+                    transform: none;
+                    z-index: 2;
+                    border-radius: 30px;
+                    border: 1px solid $theme-color;
+                    margin: 0;
+                }
+            }
+        }
+
+        &.style3 {
+            .item {
+                color: $white-color;
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 58px;
+                transform: rotate(-2deg);
+
+                img {
+                    transform: rotate(0);
+                }
+            }
+        }
+
+        &.style4 {
+            .item {
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 58px;
+            }
+        }
+
+        .img {
+            margin: 20px;
+        }
+
+        .item {
+            font-family: $title-font;
+            font-size: 30px;
+            font-weight: 700;
+            color: $title-color;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+
+            span {
+                margin: 0px;
+            }
+
+            img {
+                margin: 0;
+                margin-right: 35px;
+            }
+        }
+    }
+}
+
+/* marquee-area3 start -----------------------------*/
+.marquee-area3 {
+    position: relative;
+    z-index: 2;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: $title-color;
+        transform: rotate(-2deg);
+        //margin-left: -4px;
+        z-index: -1;
+    }
+
+}

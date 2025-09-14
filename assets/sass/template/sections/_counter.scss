@@ -1,0 +1,319 @@
+/* Counter 1 ---------------------------------- */
+.counter-card {
+    position: relative;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+
+        .divider {
+            position: relative;
+            z-index: 2;
+            width: 30px;
+            height: 71px;
+            background-image: url("../img/shape/shape-6.png");
+            background-repeat: no-repeat;
+
+            &:last-of-type {
+                display: none;
+            }
+        }
+
+    }
+
+    .box-number {
+        font-size: 48px;
+        color: $title-color;
+        font-weight: 700;
+        margin-bottom: 0px;
+        margin-top: -0.2em;
+    }
+
+    .box-text {
+        font-size: 18px;
+        color: $title-color;
+    }
+
+    .media-body {
+        flex: 1;
+    }
+
+    &-wrap {
+        &.style2 {
+            background-color: $title-color;
+            padding: 42px 60px;
+
+            .divider {
+                background-color: rgba($color: #fff, $alpha: 0.5);
+            }
+
+            @include xl {
+                padding: 40px 30px;
+            }
+
+            @include sm {
+                padding: 40px 12px;
+            }
+        }
+    }
+
+    &-wrap {
+        &.style3 {
+            background-color: $theme-color;
+            padding: 42px 8px;
+            text-align: center;
+            justify-content: space-evenly;
+            mask-image: url('data:image/svg+xml,<svg width="1320" height="144" viewBox="0 0 1320 144" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 144H1320V97.5685C1320 86.9599 1315.79 76.7857 1308.28 69.2843L1250.72 11.7157C1243.21 4.21428 1233.04 0 1222.43 0H16C7.16345 0 0 7.16344 0 16V144Z" fill="white"/></svg>');
+            mask-size: 100% 100%;
+
+            .divider {
+                background-color: rgba($color: #fff, $alpha: 0.5);
+
+                @include md {
+                    height: 60px;
+                }
+            }
+
+            @include sm {
+                mask-image: url('data:image/svg+xml,<svg width="401" height="281" viewBox="0 0 401 281" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.88351e-05 281H400V190.717C400 171.004 400.071 81.3476 400.078 60.3992C400.078 58.7419 399.735 57.156 399.07 55.6379L380.371 12.9499C376.172 1.40337 368.889 1.00017 365.674 1.00017H16.3201C13.6423 1.00017 0 -0.0974007 0 17.0848L1.88351e-05 281Z" fill="white"/></svg>');
+            }
+
+            .counter-card {
+                display: block;
+            }
+        }
+
+        &.style4 {
+            background-color: $title-color;
+            padding: 42px 8px;
+            text-align: center;
+            justify-content: space-evenly;
+            border-radius: 24px;
+
+            .divider {
+                background-color: rgba($color: #fff, $alpha: 0.5);
+
+                @include md {
+                    height: 60px;
+                }
+            }
+
+            .counter-card {
+                display: block;
+            }
+        }
+    }
+}
+
+@include md {
+    .counter-card {
+        &-wrap {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 30px 0;
+
+            .divider {
+                display: none;
+            }
+        }
+
+        .box-number {
+            font-size: 36px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+@media(max-width: 480px) {
+    .counter-card {
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+
+        &-wrap {
+            display: block;
+        }
+
+    }
+}
+
+/* counter-box  start ---------------------*/
+/* counter-box  start ---------------------*/
+.counter-box {
+    .box-icon {
+        margin-bottom: 10px;
+    }
+
+    .box-number {
+        font-size: 74px;
+        line-height: 74px;
+        margin-bottom: 0;
+
+        @include lg {
+            font-size: 50px;
+            line-height: 50px;
+        }
+    }
+
+    &-wrap {
+        min-width: 250px;
+        @include sm {
+            min-width: 100%;
+            margin-top: 30px;
+        }
+
+        .divider {
+            margin: 40px 0;
+            width: 100%;
+            height: 1px;
+            background-color: $gray-color;
+
+            &:last-of-type {
+                display: none;
+            }
+        }
+
+
+    }
+}
+.counter-box2 {
+    padding: 64px 0;
+
+    @include md {
+        padding: 0;
+    }
+
+    @include vxs {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .box-icon {
+        margin-bottom: 10px;
+    }
+
+    .box-number {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        text-transform: capitalize;
+
+
+        color: $theme-color;
+        margin-bottom: 0;
+
+        @include lg {
+            font-size: 50px;
+            line-height: 50px;
+        }
+    }
+
+    .box-text {
+        color: $white-color;
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+
+        @include md {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 30px 0;
+            padding: 60px 0;
+        }
+
+        @include vxs {
+            display: block;
+            padding: 60px 0 30px 0;
+        }
+
+        .divider {
+            width: 1px;
+            background-color: rgba($color: #FED91F, $alpha: 0.2);
+
+            &:last-of-type {
+                display: none;
+            }
+
+            @include md {
+                display: none;
+            }
+        }
+
+    }
+}
+
+.counter-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+
+        @include sm {
+            display: block;
+        }
+
+    }
+
+    &:nth-child(2) {
+        .box-icon {
+            background: #6D2CF8;
+        }
+    }
+
+    &:nth-child(3) {
+        .box-icon {
+            background: $title-color;
+        }
+    }
+
+    .box-icon {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: $theme-color;
+        border-radius: 12px;
+
+    }
+
+    .box-title {
+        margin: 0;
+    }
+
+    .counter-text {
+        color: $body-color;
+        margin-top: -0.3rem;
+
+
+    }
+
+    &-wrap {
+        min-width: 250px;
+
+        @include sm {
+            min-width: 100%;
+            margin-top: 30px;
+        }
+
+        .divider {
+            margin: 40px 0;
+            width: 100%;
+            height: 1px;
+            background-color: $gray-color;
+
+            &:last-of-type {
+                display: none;
+            }
+        }
+
+
+    }
+}

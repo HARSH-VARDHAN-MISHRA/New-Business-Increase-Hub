@@ -1,0 +1,243 @@
+/* blog card start ------------------------------*/
+.blog-area {
+    background-color: #F0EFE9;
+}
+
+.blog-card {
+    position: relative;
+
+    &.style2 {
+        .blog-meta {
+            i {
+                color: $body-color;
+            }
+        }
+
+        .box-title {
+            font-size: 30px;
+            border-bottom: 1px solid $smoke-color;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+
+            @include lg {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .box-img {
+        margin-bottom: 35px;
+
+        @include md {
+            border-radius: 20px;
+        }
+    }
+
+    .blog-meta {
+        margin: -0.3rem 0 18px 0;
+    }
+
+    &_wrapp {
+        &:first-child {
+            .box-title {
+                font-size: 30px;
+            }
+        }
+    }
+   
+
+    .box-title {
+        font-weight: 700;
+        margin-bottom: 12px; 
+        @include md {
+            font-size: 20px;
+        }
+    }
+
+}
+
+/* blog box start ------------------------------*/
+.blog-box {
+    background-color: $white-color;
+    box-shadow: 0px 5px 14px 2px #E8E8E8;
+    padding: 30px;
+    border-radius: 30px;
+
+    .blog-img {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        margin-bottom: 30px;
+
+        img {
+            border-radius: 15px;
+            transform: 0.4s ease-in-out;
+        }
+    }
+
+    .blog-tag {
+        position: relative;
+        padding: 4.5px 20.5px;
+        font-family: $body-font;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        background-color: $theme-color;
+        border: 1px solid $white-color;
+        color: $white-color;
+        border-radius: 15px;
+        max-width: 142px;
+        display: block;
+        margin: -15px auto auto auto;
+        margin-bottom: 28px;
+        z-index: 2;
+    }
+
+    .box-title {
+        margin-bottom: 14px;
+
+    }
+
+    .blog-img {
+        img {
+            width: 100%;
+        }
+    }
+
+    .blog-meta {
+        margin: -0.3rem 0 18px 0;
+
+        i {
+            color: $body-color;
+        }
+    }
+
+    .line-btn {
+        text-transform: capitalize;
+    }
+
+    &:hover {
+        .blog-img {
+            img {
+                transform: scale(1.08);
+            }
+        }
+    }
+}
+
+/* blog grid start --------------------*/
+.blog-grid {
+    .box-img {
+        margin-bottom: 35px;
+
+        img {
+        }
+    }
+
+    .blog-meta {
+        margin-bottom: 15px;
+
+        i {
+            color: $body-color;
+        }
+    }
+
+    .line-btn {
+        font-size: 16px;
+    }
+}
+
+/* blog-item start ---------------------*/
+.blog-item {
+    position: relative;
+    z-index: 2;
+    --space: 30px;
+
+    @include md {
+        --space: 20px;
+    }
+
+    .box-img {
+        border-radius: 20px;
+        margin-bottom: -125px;
+        overflow: hidden;
+        position: relative;
+        z-index: 3;
+
+        img {
+            border-radius: 20px;
+        }
+    }
+
+    .box-content {
+        position: relative;
+        max-width: calc(100% - var(--space)* 2);
+        margin-left: var(--space);
+        background: $white-color;
+        box-shadow: 0px 4px 30px #EFEFEF;
+        border-radius: 20px;
+        padding: 40px;
+        z-index: 3;
+        transition: all 0.4s ease-in-out;
+
+        @include ml {
+            padding: 30px;
+        }
+
+    }
+
+    .blog-meta {
+        margin: -0.3rem 0 20px 0;
+    }
+
+    .box-title {
+        font-size: 22px;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    .blog-btn {
+        margin-bottom: -1.3rem;
+        transform: translateY(30px);
+        opacity: 0;
+        height: 0;
+        transition: all 0.4s ease-in-out;
+    }
+
+    &:hover {
+        .box-content {
+            background: $theme-color;
+        }
+
+        .blog-meta {
+            a {
+                color: $white-color;
+            }
+
+            i {
+                color: $white-color;
+            }
+        }
+
+        .box-title {
+            color: $white-color;
+        }
+
+        .blog-btn {
+            height: 100%;
+            opacity: 1;
+            transform: translateY(0px);
+            margin-bottom: 0;
+        }
+
+        .line-btn {
+            color: $white-color;
+
+            &:before {
+                background-color: $white-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,723 @@
+/* Team global ---------------------------------- */
+.th-team {
+    position: relative;
+
+    .box-img {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            transition: 0.4s ease-in-out;
+        }
+    }
+
+    .team-desig {
+        font-size: 14px;
+        display: block;
+        margin-bottom: -0.5em;
+        transition: 0.4s ease-in-out;
+    }
+
+    .th-social {
+        a {
+            --icon-size: 40px;
+            background-color: $smoke-color2;
+            color: $title-color;
+
+            &:hover {
+                background-color: $theme-color;
+                color: $title-color; 
+            }
+        }
+    }
+
+    .box-title {
+        margin-bottom: 3px;
+    }
+
+    &:hover {
+        .team-img {
+            img {
+                transform: scale(1.08);
+            }
+        }
+
+        .team-social {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.team-area {
+    position: relative;
+    z-index: 2;
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        height: 517px;
+        background-color: $title-color;
+        z-index: -1;
+    }
+
+    .icon-box {
+        min-width: 456px;
+        justify-content: space-between;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .slider-arrow {
+        top: 40%;
+        --icon-size: 46px;
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        background-color: $white-color;
+        border-color: $white-color;
+        color: $title-color;
+
+
+        &:hover {
+            background-color: $theme-color;
+            border-color: $theme-color;
+        }
+    }
+}
+
+/* Team Card ---------------------------------- */
+.team-card {
+    position: relative;
+    background-color: $white-color;
+    box-shadow: 0px 10px 15px 0px #E8E8E8;
+    border-radius: 30px;
+    transition: 0.4s ease-in-out;
+    z-index: 2;
+
+    &.style2 {
+        border-radius: 0;
+
+        .box-img {
+            border-radius: 0;
+        }
+    }
+
+    .box-title {
+        margin-bottom: -0.3rem;
+    }
+
+    .box-img {
+        border-radius: 30px;
+    }
+
+    .box-content {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        z-index: 3;
+    }
+
+    .team-social {
+        .icon-btn {
+            --btn-size: 40px;
+            background: #F5F8F3;
+            border: 1px solid $smoke-color;
+            color: $title-color;
+            border-radius: 50%;
+            font-size: var(--btn-font-size, 18px);
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .th-social {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            bottom: 70px;
+            right: 30px;
+            width: 40px;
+            min-height: 178px;
+            padding: 0;
+            color: var(--title-color);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: 0.4s ease-in-out;
+            z-index: 2;
+
+            a {
+                border-radius: 50%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+
+    &:hover {
+        .box-img {
+            img {
+                transform: scale(1.15);
+                transition: all ease 0.4s;
+            }
+        }
+
+        .icon-btn {
+
+            transform: rotate(45deg);
+        }
+
+        .th-social {
+            transform: scaleY(1);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.teamSlider2 {
+    .swiper-slide {
+        margin-top: 98px !important;
+        transition: all 0.5s ease-out;
+
+        @include md {
+            margin-top: 58px !important;
+        }
+
+        &.swiper-slide-active {
+            margin-top: 0 !important;
+            margin-bottom: 80px !important;
+
+            @include md {
+                margin-bottom: 40px !important;
+            }
+
+            .box-content {
+                padding: 30px 30px 0px 30px;
+                opacity: 1;
+                visibility: visible;
+                height: 100%;
+            }
+
+            .box-img {
+                &:before {
+                    opacity: 1;
+                }
+            }
+
+            .th-social a {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    }
+
+    .swiper-wrapper {
+        visibility: visible;
+    }
+}
+
+.team-box {
+    position: relative;
+    overflow: hidden;
+
+    .team-img-wrap {
+        position: relative;
+        transition: 0.4s;
+    }
+
+    .box-img {
+        overflow: hidden;
+        position: relative;
+        height: 500px;
+        z-index: 2;
+
+        @include ml {
+            height: 100%;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            bottom: -10px;
+            background: linear-gradient(180deg, rgba(18, 18, 18, 0) 40%, rgba(18, 18, 18, 0.5) 100%);
+            z-index: 1;
+            opacity: 0;
+            transition: 0.4s ease-in-out;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s ease-in-out;
+        }
+    }
+
+    .th-social {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        transition: 0.4s;
+        width: max-content;
+        z-index: 3;
+
+        a {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.3s;
+
+            &:nth-child(1) {
+                transition-delay: 0s;
+            }
+
+            &:nth-child(2) {
+                transition-delay: 0.1s;
+            }
+
+            &:nth-child(3) {
+                transition-delay: 0.2s;
+            }
+
+            &:nth-child(4) {
+                transition-delay: 0.3s;
+            }
+        }
+    }
+
+    .box-title {
+        margin-top: -0.5rem;
+        margin-bottom: 0px;
+    }
+
+    .team-desig {
+        margin-bottom: -0.3em;
+    }
+
+    .box-content {
+        padding: 30px 30px 0px 30px;
+        text-align: center;
+        padding: 0;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+    }
+
+    &:hover {
+        .team-img-wrap {
+            border-color: $theme-color;
+        }
+
+        .box-img {
+            &:before {
+                bottom: 0;
+                opacity: 1;
+            }
+
+            img {
+                transform: scale(1.08);
+            }
+        }
+
+        .th-social a {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+}
+
+.team-grid {
+    position: relative;
+    z-index: 2;
+
+    .team-img {
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+        margin-bottom: 30px;
+
+        img {
+            width: 100%;
+            filter: saturate(0);
+            transition: all 0.4s ease-in-out;
+        }
+    }
+
+    .th-social {
+        position: absolute;
+        bottom: 0%;
+        right: 0px;
+        width: 40px;
+        display: block;
+        text-align: center;
+        padding: 13px 0 13px 0;
+        background-color: $theme-color;
+        transform: scaleY(0);
+        transform-origin: bottom center;
+        transition: all 500ms ease;
+        z-index: 3;
+
+        a {
+            --icon-size: 25px;
+            background-color: transparent;
+            color: $title-color;
+            font-size: 16px;
+            border-radius: 0;
+            margin-right: 0;
+            transition: all 0.4s ease-in-out;
+
+            &:hover {
+                background-color: transparent;
+                color: $title-color;
+            }
+        }
+    }
+
+    &:hover {
+        .team-img {
+            img {
+                filter: none;
+            }
+        }
+
+        .th-social {
+            transform: scaleY(1);
+
+        }
+    }
+}
+
+
+/* Team Details ---------------------------------- */
+.team-details {
+    position: relative;
+    background: #F8F8F8;
+    padding: 60px;
+    overflow: hidden;
+
+    @include xl {
+        padding: 60px 45px;
+    }
+
+    @include md {
+        padding: 60px 35px;
+    }
+
+    @include xs {
+        padding: 60px 20px;
+    }
+
+    img {
+        width: 100%;
+        height: 516px;
+        object-fit: cover;
+        border-radius: 0px;
+
+        @include lg {
+            height: 100%;
+        }
+    }
+
+    .th-social {
+
+        @include ml {
+            margin-bottom: 30px;
+        }
+
+        a {  
+            background-color: transparent;
+            border: 1px solid $title-color;
+            &:hover {
+                background-color: $title-color;
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+.team-about {
+    .team-wrapp {
+        display: flex;
+        justify-content: space-between;
+
+        @include ml {
+            display: block;
+        }
+    }
+
+    &_title {
+        margin-top: -0.4rem;
+        margin-bottom: 0px;
+    }
+
+    &_desig {
+        font-family: $title-font;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    &_text {
+        margin-bottom: 20px;
+    }
+
+    .th-btn {
+        padding: 19.5px 38.9px;
+    }
+}
+
+.about-info {
+    &-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+        border-bottom: 1px solid rgba(27, 31, 37, 0.10);
+        margin-bottom: 40px;
+
+        @include sm {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid rgba(27, 31, 37, 0.10);
+    padding: 20px 0 20px 20px;
+
+
+    @include xl {
+        gap: 15px;
+    }
+
+    @include sm {
+        padding-left: 0;
+    }
+
+    &:not(:first-child) {
+        border-left: 1px solid rgba(27, 31, 37, 0.10);
+
+        @include sm {
+            border-left: none;
+        }
+    }
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:nth-child(3) {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    &_icon {
+        i {
+            @include equal-size-lineHeight(50px);
+            color: $theme-color;
+            background-color: $title-color;
+            border: none;
+            border-radius: 50%;
+            text-align: center;
+            transition: all 0.4s ease-in-out;
+
+            &:hover {
+                background-color: $theme-color;
+                color: $title-color;
+            }
+        }
+    }
+
+    &_subtitle {
+        margin-bottom: 0;
+    }
+
+    &_title {
+        font-family: $body-font;
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 0;
+
+        a {
+            color: inherit;
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+.about-card-img {
+    position: relative;
+    background-color: $white-color;
+    padding: 40px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.08);
+    border-radius: 30px;
+
+    img {
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    @include xl {
+        padding: 30px;
+    }
+
+    @include lg {
+        margin-bottom: 40px;
+    }
+
+    @include sm {
+        border-radius: 20px;
+
+        img {
+            border-radius: 15px;
+        }
+    }
+
+    @include vxs {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .about-card {
+        margin-left: 50px;
+    }
+}
+
+.about-card {
+    &_title {
+        margin-bottom: 15px;
+    }
+
+    &_desig {
+        color: $theme-color;
+        margin-bottom: 22px;
+        margin-top: -0.5em;
+    }
+
+    &_text {
+        margin-bottom: 26px;
+        margin-top: 32px;
+    }
+
+    .th-social a {
+        border-radius: 10px;
+    }
+}
+
+.team-info {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            b {
+                width: 100%;
+                max-width: 200px;
+                font-weight: 600;
+                font-size: 18px;
+                color: $title-color;
+            }
+
+            span,
+            a {
+                color: $body-color;
+            }
+
+            a:hover {
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+@include xs {
+    .team-info ul li b {
+        max-width: 140px;
+    }
+}
+
+.team-contact-form {
+    padding: 50px;
+    background-color: $smoke-color;
+
+    textarea {
+        height: 120px;
+    }
+
+    .form-title {
+        margin-top: -0.3em;
+        margin-bottom: 25px;
+    }
+
+    @include xs {
+        padding: 40px 20px;
+    }
+}
+
+.skill-feature {
+    text-align: left;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &_title,
+    .progress-value {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        margin-top: -0.5em;
+        font-family: $title-font;
+        color: $title-color;
+    }
+
+    .progress {
+        position: relative;
+        height: 7px;
+        background-color: $white-color;
+        overflow: visible;
+        border-radius: 10px;
+    }
+
+    .progress-bar {
+        background-color: $theme-color;
+        height: 3px;
+        margin: 2px;
+        border-radius: inherit;
+        overflow: visible;
+        position: relative;
+
+        &:not(:last-child) {
+            background-color: #333;
+        }
+    }
+
+    .progress-value {
+        position: absolute;
+        top: -30px;
+        right: -8px;
+    }
+}

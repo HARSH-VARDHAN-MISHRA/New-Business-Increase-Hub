@@ -1,0 +1,89 @@
+.appointment-area {
+    position: relative;
+    background-color: $title-color;
+    max-width: 1720px;
+    display: block;
+    margin: auto;
+    border-radius: 50px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.appointment-tabs {
+    &.nav-tabs {
+        border-bottom: none;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 24px;
+
+        @include xl {
+            grid-template-columns: auto auto auto;
+        }
+
+        @include md {
+            grid-template-columns: auto auto;
+        }
+
+        @include sm {
+            grid-template-columns: auto;
+        }
+
+        .nav-item.show .nav-link,
+        .nav-link.active {
+            color: var(--white-color);
+            border-color: rgba(126, 158, 126, 0.2);
+        }
+
+        .nav-link:focus,
+        .nav-link:hover {
+            border-color: rgba(126, 158, 126, 0.2);
+        }
+    }
+
+    .nav-link {
+        position: relative;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 22px;
+        border: none;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(126, 158, 126, 0.2);
+        border-radius: 50px;
+        z-index: 2;
+        transition: all 1.3s ease-in-out;
+
+        .box-title {
+            font-size: 22px;
+            font-family: $title-font;
+            font-weight: 500;
+            color: $white-color;
+            text-align: left;
+
+            @include ml {
+                font-size: 20px;
+            }
+        }
+
+        span {
+            display: block;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #7E9E7E;
+            margin-top: 5px;
+
+
+        }
+
+        @include sm {
+            font-size: 20px;
+        }
+
+        @include vxs {
+            font-size: 18px;
+        }
+    }
+
+}

@@ -1,0 +1,332 @@
+/* Contact Page ---------------------------------- */
+
+/* ------------------Job Post --------------------*/
+.job-post {
+    border-radius: 10px;
+    background: $white-color;
+    padding: 10px;
+    border: 2px solid #E0E0E0;
+    border-radius: 30px;
+    transition: all 0.4s ease-in-out;
+
+    &_date {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .date {
+            position: relative;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            padding: 5px 20px;
+            color: $body-color;
+            font-weight: 500;
+            letter-spacing: -0.28px;
+            z-index: 2;
+
+            &:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-color: $theme-color;
+                opacity: 0.15;
+                border-radius: 20px;
+                border-radius: 100px;
+                z-index: -1;
+            }
+
+            i {
+                margin-right: 5px;
+            }
+        }
+
+        .icon {
+            text-align: center;
+            border-radius: 100px;
+            color: $theme-color;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .box-title {
+        margin-bottom: 8px;
+
+        @include xs {
+            font-size: 20px;
+        }
+    }
+
+    &_author {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        border-radius: 20px;
+        padding: 25px 20px;
+        z-index: 2;
+
+        &:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: $theme-color;
+            opacity: 0.1;
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        @media(max-width: 400px) {
+            display: block;
+        }
+
+        .job-author {
+            min-width: 60px;
+            height: 60px;
+            line-height: 55px;
+            text-align: center;
+            border-radius: 50%;
+            border: 2px solid $theme-color;
+
+            @media(max-width: 400px) {
+                margin-bottom: 10px;
+            }
+
+            @include vxs {
+                max-width: 60px;
+            }
+
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .job-wrapp {
+        display: flex;
+        gap: 10px;
+    }
+
+    .company-name {
+        font-family: $title-font;
+        font-size: 18px;
+        color: $title-color;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .price {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: $theme-color;
+        margin-bottom: 0;
+
+        @media(max-width: 400px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .duration {
+        color: $body-color;
+    }
+
+
+    .location {
+        font-size: 14px;
+        font-weight: 400;
+
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+
+    .job-content {
+        padding: 20px;
+
+        @include xs {
+            padding: 15px;
+        }
+    }
+
+    .th-btn {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+
+    &:hover {
+        border-color: $theme-color;
+
+        .th-btn {
+            background-color: $theme-color;
+            color: $white-color;
+        }
+
+        .job-post_date .icon {
+            i {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.bottom-btn {
+    position: relative;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 534px;
+        height: 1px;
+        border: 1px solid $smoke-color;
+        z-index: -1;
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    &:before {
+        left: 110%;
+    }
+
+    &:after {
+        right: 110%;
+    }
+
+}
+
+/* job details start -------------------*/
+.job-author-wrapp {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+
+    @media(max-width: 480px) {
+        display: block;
+        .job-author{
+            margin-bottom: 15px;
+        }
+        .sec-title  {
+            font-size: 20px;
+        }
+    }
+
+    &.style2 {
+        justify-content: flex-start;
+        gap: 15px;
+        margin-bottom: -0.3rem;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $smoke-color;
+        }
+
+        .job-author {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+
+.job-meta {
+    margin-top: -0.3rem;
+
+    span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        margin-right: 25px;
+
+        @include xl {
+            margin-right: 12px;
+        }
+    }
+}
+
+.job-social-area {
+    display: flex;
+    align-items: center;
+
+    @include lg {
+        display: block;
+    }
+
+    .share-links-title {
+        font-family: $title-font;
+        font-size: 20px;
+        font-weight: 500;
+
+        @include lg {
+            margin-bottom: 10px;
+        }
+    }
+
+    .social-links {
+        padding: 0;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 0;
+        @include vxs {
+            display: block;
+        }
+
+        li {
+            list-style: none;
+            background: #2781F8;
+            border-radius: 14px;
+            padding: 7px 20px;
+            color: $white-color;
+            display: inline-block;
+            @include vxs {
+                margin-bottom: 10px;
+            }
+
+            &:nth-child(2) {
+                background: #42C6FF;
+            }
+
+            &:nth-child(3) {
+                background: #085085;
+            }
+
+            a {
+                color: $white-color;
+            }
+        }
+    }
+}
+
+.job-price-wrapp {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    .price {
+        font-weight: 500;
+        font-size: 16px;
+        color: $title-color;
+        margin-bottom: 0;
+    }
+
+    .duration {
+        color: $body-color;
+        font-weight: 400;
+    }
+
+    .location {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

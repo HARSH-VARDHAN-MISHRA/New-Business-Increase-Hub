@@ -1,0 +1,1791 @@
+/* Hero Global ---------------------------------- */
+.th-hero-wrapper {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    .slider-arrow {
+        --pos-x: 100px;
+        background-color: $white-color;
+        box-shadow: none;
+        color: $theme-color;
+        border-color: $white-color;
+
+        &:hover {
+            background-color: $theme-color;
+            color: $white-color;
+            border-color: $theme-color;
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        top: 50%;
+        left: 80px;
+        transform: translateY(-50%);
+    }
+
+}
+
+.th-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+@include xxl {
+    .th-hero-wrapper .slider-arrow {
+        --pos-x: 40px;
+    }
+}
+
+@include ml {
+    .th-hero-wrapper .slider-arrow {
+        left: auto;
+        top: calc(50% - 35px);
+        right: var(--pos-x, -120px);
+        margin: 0;
+
+        &.slider-next {
+            top: calc(50% + 35px);
+        }
+    }
+}
+
+@include md {
+    .th-hero-wrapper .slider-arrow {
+        left: auto;
+        top: calc(50% - 30px);
+        right: var(--pos-x, -120px);
+        margin: 0;
+
+        &.slider-next {
+            top: calc(50% + 30px);
+        }
+    }
+}
+
+@include sm {
+    .th-hero-wrapper .slider-arrow {
+        display: none;
+    }
+}
+
+.th-hero-bg {
+    position: absolute;
+    inset: 0;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.call-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .btn-text {
+        font-size: 14px;
+        font-weight: 500;
+        display: block;
+    }
+}
+
+.btn-group:has(.call-btn) {
+    @include lg {
+        gap: 25px;
+    }
+
+    @include sm {
+        gap: 20px;
+    }
+}
+
+/* Hero 1 ---------------------------------- */
+.hero-text {
+    font-family: $body-font;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.hero-1 {
+    .hero-img {
+        position: relative;
+        text-align: right;
+        min-width: 645px;
+        margin-right: -44px;
+        z-index: 2;
+
+        @include lg {
+            margin: 0;
+            min-width: 100%;
+            text-align: center;
+        }
+
+        .th-hero-shape {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            width: 702px;
+            height: 453px;
+            display: block;
+            margin: auto;
+            background: $theme-color;
+            opacity: 0.3;
+            clip-path: path("M351 0C157.148 0 0 156.924 0 350.5C0 386.161 5.33333 420.579 15.247 453H686.753C696.667 420.579 702 386.161 702 350.5C702 156.924 544.852 0 351 0Z");
+            z-index: -1;
+        }
+
+        .th-hero-shape2 {
+            position: absolute;
+            content: "";
+            left: 57px;
+            bottom: 0;
+            width: 588px;
+            height: 396px;
+            display: block;
+            margin: auto;
+            background: $theme-color;
+            opacity: 0.5;
+            clip-path: path("M294 0C131.628 0 0 131.404 0 293.5C0 329.555 6.51217 364.091 18.4263 396H569.574C581.488 364.091 588 329.555 588 293.5C588 131.404 456.372 0 294 0Z");
+            z-index: -1;
+        }
+
+        .th-hero-shape3 {
+            position: absolute;
+            content: "";
+            left: 121px;
+            bottom: 0;
+            width: 460px;
+            height: 332px;
+            display: block;
+            margin: auto;
+            background: $theme-color;
+            clip-path: path("M230 0C102.975 0 0 102.751 0 229.5C0 266.338 8.69837 301.149 24.1575 332H435.842C451.302 301.149 460 266.338 460 229.5C460 102.751 357.025 0 230 0Z");
+            z-index: -1;
+        }
+    }
+
+    .hero-wrapp {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.hero-style1 {
+    position: relative;
+    z-index: 6;
+    padding: 303px 0 163px 0;
+
+    @include lg {
+        text-align: center;
+        padding: 220px 0 80px 0;
+        display: block;
+        margin: auto;
+
+        .btn-group {
+            justify-content: center;
+        }
+    }
+
+    .sub-title {
+        margin-bottom: 12px;
+    }
+
+    .hero-title {
+        font-size: 84px;
+        font-weight: 700;
+        margin-bottom: 15px;
+
+        @include xl {
+            font-size: 64px;
+        }
+
+        @include xs {
+            font-size: 34px;
+        }
+
+        @include vxs {
+            font-size: 28px;
+        }
+    }
+
+    .hero-text {
+        max-width: 536px;
+
+        @include lg {
+            max-width: 100%;
+            display: block;
+            margin: auto auto 30px auto; 
+        }
+    }
+}
+
+/* hero 1 end ------------------------------*/
+
+/* hero 2 start ------------------------------*/
+.hero-2 {
+    .hero2-image {
+        position: relative;
+        margin: 140px -40px 0 0;
+
+        @include lg {
+            margin: 0;
+        }
+    }
+
+    .hero-img {
+        max-width: 618px;
+        display: block;
+        margin-left: auto;
+    }
+
+    .discount-wrapp {
+        width: 160px;
+        height: 160px;
+        background-color: $title-color;
+        position: absolute;
+        bottom: 10%;
+        left: -26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include lg {
+            left: 20%;
+        }
+
+        @include md {
+            left: 0%;
+        }
+
+        @include sm {
+            left: -3%;
+            bottom: 0;
+        }
+
+        @include xs {
+            top: 0;
+            left: 0;
+            bottom: unset;
+        }
+
+        .play-btn>i {
+            --icon-size: 60px;
+            font-size: 20px;
+            color: $theme-color;
+            background: #1F242D;
+        }
+    }
+
+    .discount-tag {
+        color: #D8DDE1;
+        font-size: 10px;
+        border: 1px solid $theme-color;
+        min-height: 120px;
+        min-width: 120px;
+
+        span {
+            --rotate-letter: 8deg;
+            min-height: 60px;
+            position: absolute;
+            min-width: 60px;
+            text-transform: lowercase;
+            left: 14px;
+            top: -2px;
+        }
+    }
+}
+
+.hero-style2 {
+    position: relative;
+    padding: 340px 0 196px 0;
+
+    @include lg {
+        text-align: center;
+        padding: 260px 0 80px 0;
+        display: block;
+        margin: auto;
+
+        .btn-group {
+            justify-content: center;
+        }
+    }
+
+    @include sm {
+        padding: 200px 0 60px 0;
+    }
+
+    .shape {
+        position: absolute;
+        top: 36%;
+        right: 26%;
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    .sub-title {
+        text-transform: capitalize;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        &:before {
+            display: none;
+        }
+
+        @include xs {
+            font-size: 16px;
+        }
+    }
+
+    .square-text {
+        position: relative;
+        display: inline-block;
+        line-height: 40px;
+        color: $theme-color;
+        border: 1px solid $theme-color;
+        padding: 2px 20px 2px 20px;
+        z-index: 2;
+
+        @include xs {
+            line-height: 40px;
+        }
+
+        .dot1,
+        .dot2 {
+            position: absolute;
+            top: -8px;
+            height: calc(100% + 20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &:before,
+            &:after {
+                content: '';
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+                background-color: $theme-color;
+            }
+        }
+
+        .dot1 {
+            left: -9px;
+        }
+
+        .dot2 {
+            right: -9px;
+        }
+    }
+
+    .hero-title {
+        color: $white-color;
+        margin-bottom: 15px;
+        line-height: 94px;
+
+        @include xl {
+            font-size: 64px;
+            line-height: 74px;
+        }
+
+        @media(max-width: 480px) {
+            font-size: 54px;
+            line-height: 64px;
+        }
+
+        @include vxs {
+            font-size: 44px;
+            line-height: 54px;
+        }
+
+        @media(max-width: 320px) {
+            font-size: 34px;
+            line-height: 44px;
+        }
+
+        .hero-box {
+            display: inline-block;
+        }
+    }
+
+    .hero-text {
+        font-size: 18px;
+        color: #D8DDE1;
+        max-width: 522px;
+
+        @include lg {
+            display: block;
+            margin: auto auto 40px auto;
+        }
+    }
+
+    .client-thumb-group {
+        height: 56px;
+        align-items: center;
+        margin-left: 25px;
+        margin-bottom: 0;
+
+        .thumb img {
+            border: none;
+            filter: none;
+        }
+
+        .thumb.icon {
+            line-height: normal;
+            padding: 10px 0;
+            border: none;
+        }
+
+        span {
+            font-family: $body-font2;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 15px;
+            display: block;
+        }
+    }
+}
+
+/* hero 2 end ------------------------------*/
+/* hero 3 start ------------------------------*/
+.hero-3 {
+    .hero-shape {
+        position: absolute;
+        left: 109px;
+        bottom: 21px;
+
+        @include xxl {
+            left: 0;
+        }
+    }
+
+    .hero-img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include xl {
+            margin-right: -200px;
+        }
+
+        @include lg {
+            position: relative;
+            margin: 0;
+        }
+    }
+
+    .th-circle {
+        .circle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            display: block;
+            background-color: $theme-color;
+            border-radius: 50%;
+
+            &.style1 {
+                left: 45%;
+                bottom: 25%;
+                animation: zoom1 10s linear infinite;
+                transition-delay: 2s;
+            }
+
+            &.style2 {
+                width: 16px;
+                height: 16px;
+                bottom: 22%;
+                right: 10%;
+                background-color: $theme-color;
+                animation: fadeLeftRight 3s infinite ease-in-out;
+
+                @include md {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.hero-style3 {
+    padding: 346px 0 207px 0;
+
+    @include lg {
+        padding: 246px 0 0px 0;
+        text-align: center;
+    }
+
+    .sub-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 34px;
+        color: $theme-color;
+        transform: rotate(4.36deg);
+        border: 1px solid $theme-color;
+        border-radius: 0;
+        margin-bottom: 10px;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .hero-title {
+        font-size: 72px;
+        color: $white-color;
+        font-weight: 600;
+
+
+        @include ml {
+            font-size: 54px;
+        }
+
+        @include md {
+            font-size: 50px;
+        }
+
+        @include xs {
+            font-size: 40px;
+        }
+
+        @include vxs {
+            font-size: 30px;
+        }
+    }
+
+    .hero-text {
+        font-size: 18px;
+        color: #A6AAB2;
+        max-width: 635px;
+        margin-bottom: 30px;
+
+        @include lg {
+            max-width: 100%;
+            display: block;
+            margin: auto auto 30px auto;
+        }
+    }
+
+    .th-btn {
+        font-size: 14px;
+        min-width: 156px;
+        padding: 19.5px 32px;
+    }
+
+    .btn-group {
+        gap: 30px;
+
+        @include lg {
+            justify-content: center;
+        }
+    }
+}
+
+/* hero 3 end ------------------------------*/
+/* hero 4 start ------------------------------*/
+.hero-4 {
+    position: relative;
+    background-color: #F9F6E7;
+
+    .hero-img {
+        text-align: right;
+        min-width: 671px;
+        margin-top: 90px;
+        margin-left: -50px;
+
+        @media(max-width: 1699px) {
+            min-width: 100%;
+        }
+
+        @include lg {
+            text-align: center;
+            margin: 0;
+            padding-bottom: 140px;
+        }
+    }
+}
+
+.hero-style4 {
+    position: relative;
+    z-index: 6;
+    padding: 317px 0 216px 0;
+
+    @include xl {
+        padding: 225px 0 120px 0;
+    }
+
+    @include lg {
+        text-align: center;
+        padding: 200px 0 80px 0;
+        display: block;
+        margin: auto;
+
+        .btn-group {
+            justify-content: center;
+        }
+    }
+
+    @include xs {
+        padding: 180px 0 80px 0;
+    }
+
+    .sub-title {
+        margin-bottom: 15px;
+
+        &:before {
+            display: none;
+        }
+
+        .square-text {
+            position: relative;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 28px;
+            text-transform: uppercase;
+            color: #121212;
+            border: 2px solid #6D2CF8;
+            padding: 6px 20px 6px 20px;
+            z-index: 2;
+
+            @include xs {
+                line-height: 40px;
+            }
+
+            .dot1,
+            .dot2 {
+                position: absolute;
+                top: -8px;
+                height: calc(100% + 20px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &:before,
+                &:after {
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    display: inline-block;
+                    border: 2px solid #6D2CF8;
+                }
+            }
+
+            .dot1 {
+                left: -9px;
+            }
+
+            .dot2 {
+                right: -9px;
+            }
+        }
+
+    }
+
+    .hero-title {
+        margin-bottom: 15px;
+
+        @include ml {
+            font-size: 72px;
+        }
+
+        @include xl {
+            font-size: 64px;
+        }
+
+        @include sm {
+            font-size: 50px;
+        }
+
+        .round-line {
+            position: relative;
+            padding-left: 20px;
+
+            &:after {
+                content: '';
+                height: 92px;
+                width: 172%;
+                background-image: url("data:image/svg+xml,%3Csvg width='215' height='92' viewBox='0 0 215 92' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M213.141 19.6178C214.302 24.237 212.704 29.4727 208.485 35.0736C204.273 40.6656 197.545 46.485 188.762 52.1789C171.206 63.5611 145.638 74.317 116.22 81.7118C86.8019 89.1065 59.1864 91.7193 38.335 89.9916C27.9041 89.1273 19.2235 87.1813 12.8682 84.2455C6.50265 81.3051 2.61875 77.4474 1.45761 72.8281C0.296479 68.2089 1.8946 62.9732 6.11307 57.3723C10.3248 51.7803 17.0534 45.9609 25.8358 40.267C43.3918 28.8848 68.9604 18.1289 98.3783 10.7341C127.796 3.33942 155.412 0.726579 176.263 2.45431C186.694 3.3186 195.375 5.26465 201.73 8.20039C208.096 11.1408 211.979 14.9985 213.141 19.6178Z' stroke='%236D2CF8' stroke-width='2'/%3E%3C/svg%3E%0A");
+                background-size: 316px 92px;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0px;
+                left: -60px;
+                animation: roundFill 3s linear infinite;
+                z-index: -1;
+
+                @include sm {
+                    top: -25px;
+                }
+            }
+        }
+    }
+
+    .hero-text {
+        font-family: $title-font;
+        font-size: 18px;
+        font-weight: 500;
+        color: $title-color;
+        max-width: 712px;
+
+        @include lg {
+            max-width: 100%;
+            display: block;
+            margin: auto auto 30px auto;
+        }
+    }
+
+    .play-btn {
+
+        &:before,
+        &:after {
+            display: none;
+        }
+
+        >i {
+            --icon-size: 55px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 100px;
+            font-size: 16px;
+
+            &:hover {
+                background-color: $theme-color;
+            }
+        }
+    }
+
+    .btn-title {
+        color: $white-color;
+    }
+
+    .th-btn {
+        padding: 19.5px 30px;
+    }
+}
+
+/* hero 4 end ------------------------------*/
+/* hero 5 start ------------------------------*/
+.hero-5 {
+    background-color: #D4E2E3;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 100%;
+        background-color: $white-color;
+
+        @media(max-width: 1799px) {
+            display: none;
+        }
+    }
+
+
+
+    .th-hero-thumb {
+        position: absolute;
+        right: 10%;
+        bottom: 0;
+
+        @include xxl {
+            right: 2%;
+        }
+
+        @include xl {
+            position: relative;
+            right: unset;
+            text-align: center;
+        }
+
+        .hero5-shape {
+            position: absolute;
+            left: 0;
+            top: 40%;
+
+            img {
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.hero-style5 {
+    padding: 327px 0 287px 0;
+    max-width: 660px;
+
+    @include xl {
+        padding: 200px 0 80px 0;
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
+
+    @include sm {
+        padding: 140px 0 80px 0;
+    }
+
+    .hero-title {
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        text-transform: capitalize;
+        margin-top: -0.7rem;
+    }
+
+    .hero-title2 {
+        font-weight: 600;
+        font-size: 84px;
+        line-height: 94px;
+        display: block;
+
+        @include lg {
+            font-size: 74px;
+            line-height: 84px;
+        }
+
+        @include sm {
+            font-size: 54px;
+            line-height: 64px;
+        }
+
+        @include xs {
+            font-size: 44px;
+            line-height: 54px;
+        }
+
+        @include vxs {
+            font-size: 34px;
+            line-height: 44px;
+        }
+    }
+}
+
+.hero-form {
+    background-color: $white-color;
+    border-radius: 40px;
+    padding: 18px;
+
+    @include vxs {
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+
+        &:first-child {
+            border-right: 1px solid #CCCCCC;
+
+            @include sm {
+                border-right: 0;
+            }
+
+            input {
+                padding-left: 45px;
+
+                @include vxs {
+                    padding: 0 10px;
+                    font-size: 14px;
+                    padding-left: 30px;
+                }
+            }
+        }
+
+        >i {
+            right: unset;
+            left: 25px;
+            top: 13px;
+            font-size: 16px;
+            color: $title-color;
+
+            @include vxs {
+                left: 15px;
+            }
+        }
+    }
+
+    select,
+    .form-control,
+    .form-select,
+    textarea,
+    input {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 25px 0 25px;
+        border: none;
+        color: var(--body-color);
+        background-color: transparent;
+        border-radius: 100px;
+        font-size: 16px;
+        width: 100%;
+        transition: 0.4s ease-in-out;
+    }
+
+    .nice-select {
+        font-size: 16px;
+        color: $title-color;
+        text-align: left;
+
+        @include vxs {
+            font-size: 14px;
+            padding: 0 5px;
+        }
+
+        &:after {
+            top: 13px;
+        }
+
+        .option {
+            color: $title-color;
+
+            &.selected {
+                color: $theme-color !important;
+                background: $theme-color !important;
+
+                &.focus {
+                    color: #fff !important;
+                    background: $theme-color !important;
+                }
+            }
+
+            &:hover,
+            &.focus {
+                background: $theme-color !important;
+                color: #fff !important;
+            }
+        }
+
+        &.open {
+            .list {
+                border-bottom: 3px solid $theme-color;
+            }
+        }
+    }
+
+    .form-btn {
+        text-align: right;
+    }
+
+    .th-btn {
+        padding: 12px 31px;
+        font-size: 14px;
+
+        @include sm {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}
+
+/* hero 5 end ------------------------------*/
+/* hero 6 end ------------------------------*/
+.hero-6 {
+    .th-hero-bg {
+        mask-image: url("../img/bg/hero6_bg_shape.png");
+        mask-size: cover;
+        mask-repeat: no-repeat;
+        background-position: left center;
+    }
+
+    .th-hero-thumb {
+        position: absolute;
+        right: 120px;
+        top: 109px;
+
+        @media(max-width: 1799px) {
+            right: 0;
+        }
+
+        @media(max-width: 1499px) {
+            right: -30px;
+        }
+
+        @include xl {
+            right: 0;
+        }
+
+        @include xl {
+            position: relative;
+            right: unset;
+            top: 0;
+            text-align: center;
+            padding-bottom: 80px;
+        }
+
+        @include sm {
+            padding-bottom: 0;
+        }
+    }
+
+    .scroll-down {
+        position: absolute;
+        bottom: 25%;
+        left: 55px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        padding: 40px 10px;
+        border: 1px solid $white-color;
+        text-align: center;
+        z-index: 2;
+        display: block;
+        color: $white-color;
+
+        @media(max-width: 1799px) {
+            left: 10px;
+        }
+
+        @media(max-width: 1699px) {
+            bottom: 3%;
+            left: 30%;
+        }
+
+        @include xxl {
+            left: 35%;
+        }
+
+        @include xl {
+            display: none;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        img {
+            animation: lineDown 1.5s infinite;
+        }
+
+        span {
+            display: block;
+        }
+
+
+    }
+
+    .hero-line {
+        position: absolute;
+        top: 34%;
+        left: 7%;
+        display: flex;
+        justify-content: flex-start;
+        width: 1px;
+        height: 150px;
+        gap: 20px;
+        flex-flow: wrap;
+        transform: translateY(-50%);
+
+        @media(min-width: 1930px) {
+            left: 5%;
+        }
+
+        @media(max-width: 1799px) {
+            left: 4%;
+        }
+
+        @media(max-width: 1699px) {
+            display: none;
+        }
+
+        .line {
+            height: 75px;
+            width: 1px;
+            display: block;
+            background-color: rgba(255, 255, 255, 0.6);
+
+            &.line1 {
+                height: 150px;
+            }
+        }
+    }
+}
+
+.hero-style6 {
+    max-width: 780px;
+    padding: 263px 0 284px 0;
+
+    @include xl {
+        display: block;
+        margin: auto;
+        padding: 200px 0 0px 0;
+        text-align: center;
+    }
+
+    @media(max-width: 480px) {
+        padding: 150px 0 0 0;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-weight: 700;
+        font-size: 94px;
+        line-height: 104px;
+        text-transform: uppercase;
+
+        @include ml {
+            font-size: 74px;
+            line-height: 84px;
+        }
+
+        @include sm {
+            font-size: 50px;
+            line-height: 70px;
+        }
+
+        @media(max-width: 480px) {
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+    }
+
+    img {
+        display: inline-block;
+        border-radius: 60px;
+
+        @media(max-width: 480px) {
+            display: block;
+            padding: 20px 0 10px 0;
+            text-align: center;
+            margin: auto;
+        }
+
+        img {
+            border-radius: 60px;
+        }
+    }
+
+    .hero-text {
+        font-size: 16px;
+        color: #ACB5C4;
+        font-weight: 300;
+        max-width: 690px;
+
+        @include ml {
+            max-width: 560px;
+        }
+
+        @include xl {
+            display: block;
+            margin: auto auto 30px auto;
+            text-align: center;
+        }
+    }
+
+    .btn-group {
+        @include xl {
+            justify-content: center;
+        }
+    }
+
+    .th-btn.style5 {
+        color: $white-color;
+    }
+}
+
+.hero-tag {
+    position: relative;
+    display: inline-block;
+
+    @media(max-width: 480px) {
+        display: block;
+    }
+
+    .play-btn {
+        position: absolute;
+        left: 50%;
+        top: 28%;
+        transform: translate(-50%, -50%);
+
+        @include ml {
+            top: 35%;
+        }
+
+        @include sm {
+            top: 40%;
+        }
+
+        @media(max-width: 480px) {
+            top: 45%;
+        }
+
+        &:before,
+        &:after {
+            display: none;
+        }
+
+        >i {
+            --icon-size: 70px;
+            font-size: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background-color: transparent;
+        }
+    }
+}
+
+.hero-title-anime {
+    font-size: 14px;
+    font-weight: 700;
+    width: 126px;
+    height: 126px;
+    border-radius: 50%;
+    transition: 0.4s;
+    position: relative;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    line-height: 17px;
+    text-align: center;
+    animation: spin 10s infinite alternate-reverse;
+
+    span {
+        --rotate-letter: 17deg;
+        min-height: 60px;
+        position: absolute;
+        min-width: 60px;
+        left: 32px;
+        color: $theme-color;
+        top: 0px;
+        transform-origin: bottom center;
+        transform: rotate(var(--rotate-letter));
+
+        &.char2 {
+            transform: rotate(calc(var(--rotate-letter) * 2));
+        }
+
+        &.char3 {
+            transform: rotate(calc(var(--rotate-letter) * 3));
+        }
+
+        &.char4 {
+            transform: rotate(calc(var(--rotate-letter) * 4));
+        }
+
+        &.char5 {
+            transform: rotate(calc(var(--rotate-letter) * 5));
+        }
+
+        &.char6 {
+            transform: rotate(calc(var(--rotate-letter) * 6));
+        }
+
+        &.char7 {
+            transform: rotate(calc(var(--rotate-letter) * 7));
+        }
+
+        &.char8 {
+            transform: rotate(calc(var(--rotate-letter) * 8));
+        }
+
+        &.char9 {
+            transform: rotate(calc(var(--rotate-letter) * 9));
+        }
+
+        &.char10 {
+            transform: rotate(calc(var(--rotate-letter) * 10));
+        }
+
+        &.char11 {
+            transform: rotate(calc(var(--rotate-letter) * 11));
+        }
+
+        &.char12 {
+            transform: rotate(calc(var(--rotate-letter) * 12));
+        }
+
+        &.char13 {
+            transform: rotate(calc(var(--rotate-letter) * 13));
+        }
+
+        &.char14 {
+            transform: rotate(calc(var(--rotate-letter) * 14));
+        }
+
+        &.char15 {
+            transform: rotate(calc(var(--rotate-letter) * 15));
+        }
+
+        &.char16 {
+            transform: rotate(calc(var(--rotate-letter) * 16));
+        }
+
+        &.char17 {
+            transform: rotate(calc(var(--rotate-letter) * 17));
+        }
+
+        &.char18 {
+            transform: rotate(calc(var(--rotate-letter) * 18));
+        }
+
+        &.char19 {
+            transform: rotate(calc(var(--rotate-letter) * 19));
+        }
+
+        &.char20 {
+            transform: rotate(calc(var(--rotate-letter) * 20));
+        }
+
+        &.char21 {
+            transform: rotate(calc(var(--rotate-letter) * 21));
+        }
+
+        &.char22 {
+            transform: rotate(calc(var(--rotate-letter) * 22));
+        }
+
+        &.char23 {
+            transform: rotate(calc(var(--rotate-letter) * 23));
+        }
+
+        &.char24 {
+            transform: rotate(calc(var(--rotate-letter) * 24));
+        }
+
+        &.char25 {
+            transform: rotate(calc(var(--rotate-letter) * 25));
+        }
+
+        &.char26 {
+            transform: rotate(calc(var(--rotate-letter) * 26));
+        }
+
+        &.char27 {
+            transform: rotate(calc(var(--rotate-letter) * 27));
+        }
+
+        &.char28 {
+            transform: rotate(calc(var(--rotate-letter) * 28));
+        }
+
+        &.char29 {
+            transform: rotate(calc(var(--rotate-letter) * 29));
+        }
+
+        &.char30 {
+            transform: rotate(calc(var(--rotate-letter) * 30));
+        }
+
+        &.char31 {
+            transform: rotate(calc(var(--rotate-letter) * 31));
+        }
+
+        &.char32 {
+            transform: rotate(calc(var(--rotate-letter) * 32));
+        }
+
+        &.char33 {
+            transform: rotate(calc(var(--rotate-letter) * 33));
+        }
+    }
+}
+
+/* hero 6 end ------------------------------*/
+/* hero 7 start ------------------------------*/
+.hero-7 {
+    overflow: visible;
+    margin-bottom: 80px;
+
+    .th-hero-bg {
+        max-width: 1760px;
+        display: block;
+        margin: auto;
+        border-radius: 50px;
+        z-index: 2;
+
+        @include lg {
+            border-radius: 0;
+        }
+
+        .hero-bg-shape {
+            position: absolute;
+            width: 57.3%;
+            height: 870px;
+            top: 0px;
+            right: 0px;
+            background: $title-color;
+            border-radius: 0 50px 50px 0px;
+            clip-path: path("M317.312 0H1009V870H506.219H0.1875L317.312 0Z");
+            z-index: 2;
+
+            @include xl {
+                height: 808px;
+            }
+
+            @include lg {
+                top: unset;
+                bottom: 0;
+                border-radius: 0;
+                right: 0px;
+                width: 100%;
+                clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
+            }
+
+            @include vxs {
+                display: none;
+            }
+
+        }
+
+    }
+
+    .hero7-bg-shape {
+        position: absolute;
+        width: 58.2%;
+        height: 1070px;
+        top: -122px;
+        right: 0;
+        background: #0A0A0A;
+        z-index: 1;
+        clip-path: path("M390 0H1118V1070H0L390 0Z");
+
+        @media(max-width: 1800px) {
+            width: 58.7%;
+        }
+
+        @media(max-width: 1700px) {
+            width: 59%;
+        }
+
+        @include xxl {
+            width: 59.3%;
+        }
+
+        @include xl {
+            height: 980px;
+            width: 59.6%;
+        }
+
+        @include lg {
+            display: none;
+        }
+
+    }
+
+    .hero7-image {
+        position: relative;
+
+        .hero-img {
+            position: relative;
+            max-width: 380px;
+            height: 564px;
+            display: block;
+            margin-left: auto;
+            margin-right: 37px;
+            border-radius: 250px;
+            z-index: 2;
+
+            @include lg {
+                display: block;
+                margin: auto;
+                margin-bottom: 120px;
+            }
+
+            @media(max-width: 480px) {
+                max-width: 300px;
+                height: 100%;
+            }
+
+            @include vxs {
+                margin-bottom: 70px;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                inset: -15px;
+                border: 1px solid $body-color;
+                opacity: 0.4;
+                border-radius: inherit;
+
+                @media(max-width: 340px) {
+                    display: none;
+                }
+            }
+
+            &:after {
+                inset: -40px;
+            }
+
+            img {
+                border-radius: 200px;
+            }
+
+            .hero7-shape {
+                position: absolute;
+                z-index: 2;
+
+                &.style1 {
+                    left: -55px;
+                    top: 0;
+
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+
+                &.style2 {
+                    right: -30%;
+                    bottom: 0;
+
+                    @include xxl {
+                        right: 0;
+                    }
+
+                    @media(max-width: 480px) {
+                        display: none;
+                    }
+
+                    img {
+                        border-radius: 20px;
+                    }
+                }
+
+                &.style3 {
+                    top: -25%;
+                    right: -50%;
+
+                    @media(max-width: 1699px) {
+                        right: -30%;
+                    }
+
+                    @media(max-width: 1599px) {
+                        right: 0;
+                    }
+                }
+
+                &.style4 {
+                    top: -7%;
+                    left: 0;
+                }
+
+                &.style5 {
+                    bottom: 35%;
+                    left: -56%;
+
+                    @include sm {
+                        left: 0;
+                    }
+
+                }
+
+                &.style6 {
+                    bottom: 31%;
+                    right: -40%;
+
+                    @media(max-width: 1599px) {
+                        bottom: 34%;
+                        right: -46px;
+                    }
+
+                    @media(max-width: 480px) {
+                        display: none;
+                    }
+                }
+
+                &.style7 {
+                    bottom: -7%;
+                    right: 15%;
+
+                    @media(max-width: 480px) {
+                        display: none;
+                    }
+                }
+            }
+
+
+        }
+
+        .client-box2 {
+            background: $white-color;
+            border-radius: 20px;
+            padding: 15px 30px;
+            display: inline-block;
+            position: absolute;
+            left: -45%;
+            bottom: 20%;
+            z-index: 2;
+
+            @include xl {
+                left: -40%;
+            }
+
+            @include sm {
+                left: -20%;
+            }
+
+            @include xs {
+                left: 0%;
+            }
+
+            .box-title {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 26px;
+                color: $title-color;
+                margin-bottom: 5px;
+            }
+
+        }
+    }
+
+    .scroll-down {
+        position: absolute;
+        bottom: -11%;
+        left: 34px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        padding: 40px 10px;
+        border: 1px solid $white-color;
+        text-align: center;
+        z-index: 2;
+        display: block;
+        color: $title-color;
+        font-weight: 700;
+        background: #EBEEFF;
+        border: 5px solid $white-color;
+
+        @media(max-width: 1699px) {
+            display: none;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        img {
+            filter: brightness(0.9) invert(1);
+            animation: lineDown 1.5s infinite;
+        }
+
+        span {
+            display: block;
+        }
+
+
+    }
+
+    .client-box {
+        position: absolute;
+        padding-top: 20px;
+
+        @include vxs {
+            position: relative;
+            z-index: 2;
+            padding: 0 0 40px 0;
+            text-align: center;
+        }
+
+        .ratting-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: $title-color;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .box-title {
+            color: $theme-color;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .client-wrapp {
+            display: block;
+            text-align: center;
+            margin-left: 50px;
+
+            @media(max-width: 480px) {
+                margin-left: 0;
+                text-align: left;
+            }
+
+            @include vxs {
+                text-align: center;
+            }
+
+            .client-review {
+                color: $theme-color;
+
+                i {
+                    color: $theme-color;
+                    font-size: 12px;
+                    margin-right: 2px;
+                }
+            }
+        }
+    }
+}
+
+.hero-style7 {
+    position: relative;
+    padding: 190px 0;
+    z-index: 3;
+
+    @include lg {
+        padding: 150px 0 120px 0;
+        text-align: center;
+    }
+
+    @include xs {
+        padding: 100px 0 120px 0;
+    }
+
+    .sub-title {
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .hero-title {
+        font-size: 84px;
+        line-height: 94px;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        @include ml {
+            font-size: 74px;
+            line-height: 84px;
+        }
+
+        @include xl {
+            font-size: 64px;
+            line-height: 74px;
+        }
+
+        @include md {
+            font-size: 54px;
+            line-height: 64px;
+        }
+
+        @include xs {
+            font-size: 44px;
+            line-height: 54px;
+        }
+
+        @include vxs {
+            font-size: 34px;
+            line-height: 44px;
+        }
+    }
+
+    .hero-text {
+        font-weight: 400;
+        max-width: 580px;
+        font-family: $body-font;
+
+        @include lg {
+            max-width: 100%;
+            display: block;
+        }
+    }
+}
+
+/* hero 7 end ------------------------------*/

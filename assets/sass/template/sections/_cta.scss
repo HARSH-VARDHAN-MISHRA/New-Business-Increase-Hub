@@ -1,0 +1,585 @@
+/* cta 1 area  start ----------------------------*/
+.cta-area {
+    position: relative;
+    background-color: $white-color;
+    box-shadow: 0px -7px 100px rgba(102, 102, 102, 0.12);
+    border-radius: 50px;
+    z-index: 3;
+
+    @include sm {
+        padding: 80px 40px;
+    }
+
+    @include vxs {
+        padding: 80px 20px;
+    }
+}
+
+.cta-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    text-transform: capitalize;
+    color: #121212;
+
+    @include lg {
+        font-size: 36px;
+        line-height: 46px;
+    }
+}
+
+.cta-text {
+    max-width: 490px;
+    display: block;
+    margin: auto auto 40px auto;
+}
+
+
+.cta-text2 {
+    max-width: 670px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: $title-font;
+    display: block;
+    margin: auto auto 30px auto;
+}
+
+.newsletter-form {
+    position: relative;
+    max-width: 580px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+
+    @include sm {
+        display: block;
+        max-width: 100%;
+    }
+
+    &.style2 {
+        width: 100%;
+        max-width: 633px;
+        margin-right: 0;
+        justify-content: flex-start;
+        gap: 10px;
+
+        @include lg {
+            justify-content: center;
+            margin: auto;
+        }
+
+        .form-group {
+            position: relative;
+            width: 100%;
+
+            >i {
+                left: 25px;
+                top: 19px;
+                right: unset;
+                color: $theme-color;
+            }
+        }
+
+        select,
+        .form-control,
+        .form-select,
+        textarea,
+        input {
+            min-width: 100%;
+            border: none;
+            min-height: 55px;
+            padding: 0 25px 0 25px;
+            padding-left: 50px;
+        }
+
+        .th-btn {
+            position: relative;
+            top: 0;
+            right: 0;
+            min-width: 180px;
+            padding: 19.5px 30px;
+
+            @include sm {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &.style3 {
+        width: 100%;
+        max-width: 633px;
+        margin-right: 0;
+        justify-content: flex-start;
+        gap: 10px;
+
+        @include lg {
+            justify-content: center;
+            margin: auto;
+        }
+
+        .form-group {
+            position: relative;
+            width: 100%;
+
+            >i {
+                left: 25px;
+                top: 19px;
+                right: unset;
+                color: $theme-color;
+            }
+        }
+
+        select,
+        .form-control,
+        .form-select,
+        textarea,
+        input {
+            min-width: 100%;
+            min-height: 55px;
+            padding: 0 25px 0 25px;
+            padding-left: 50px;
+        }
+
+        .th-btn {
+            position: relative;
+            top: 0;
+            right: 0;
+            min-width: 180px;
+            padding: 19.5px 30px;
+
+            @include sm {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &.style4 {
+        .form-control {
+            background-color: transparent;
+            border: 1px solid #7A8392;
+
+            &:focus {
+                color: $white-color;
+            }
+        }
+    }
+
+    .form-control {
+        border-radius: 100px;
+        min-height: 60px;
+        padding-right: 200px;
+        background-color: $white-color;
+
+        @include sm {
+            padding-right: 0;
+        }
+    }
+
+
+    .th-btn {
+        min-width: 130px;
+        padding: 16px 35px;
+        border-radius: 100px;
+        position: absolute;
+        top: 7px;
+        right: 7px;
+
+        @include sm {
+            position: relative;
+            right: 0;
+            top: 10px;
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+/* cta 1 area  start ----------------------------*/
+
+/* cta 2 area start --------------------*/
+.cta-area2 {
+    position: relative;
+    max-width: 1760px;
+    display: block;
+    margin: auto;
+    background: #121212;
+    border-radius: 0px 0px 50px 50px;
+    z-index: 3;
+}
+/* download area2 start ----------------------*/
+.download-thumb {
+    position: relative;
+    background: $white-color;
+    padding: 21px 70px;
+    box-shadow: 0px 4px 50px #EFEFEF;
+    border-radius: 50px;
+    z-index: 2;
+    overflow: hidden;
+
+    .circle-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+/* software 1 area  start ----------------------------*/
+.software-area {
+    background-color: $white-color;
+    box-shadow: 0px 10px 50px 10px #E8E8E8;
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+
+.software-content {
+    padding: 120px 0 120px 120px;
+
+    @include xl {
+        padding: 80px 0 90px 40px;
+    }
+
+    @include md {
+        padding: 80px 40px 80px 40px;
+    }
+
+    @include xs {
+        padding: 80px 20px 80px 20px;
+    }
+}
+
+.soft-image {
+    height: 523px;
+    margin-left: -37%;
+
+    @include lg {
+        margin-left: 0;
+    }
+
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* software 1 area  end ----------------------------*/
+
+/* cta 10 start ---------------------*/
+.cta-area3 {
+    position: relative;
+    background-color: #022124;
+    border-radius: 30px;
+    z-index: 3;
+
+    @include md {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .sec-title {
+        font-size: 54px;
+
+        @include xl {
+            font-size: 44px;
+        }
+
+        @include lg {
+            font-size: 40px;
+        }
+
+        @include xs {
+            font-size: 30px;
+        }
+    }
+
+    .cta-text {
+        font-size: 18px;
+        max-width: 690px;
+        display: block;
+        margin: auto auto 30px auto;
+    }
+}
+
+/* cta 3 end ---------------------*/
+/* cta 4 end ---------------------*/
+.cta-area4 {
+    background: $title-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0 0 40px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+
+    @include sm {
+        display: block;
+        text-align: center;
+        padding: 40px 20px 0 20px;
+    }
+
+    .sec-title {
+        max-width: 405px;
+
+        @include sm {
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
+    }
+
+    .cta-image {
+        margin-bottom: -40px;
+    }
+
+    .cta-shate {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+}
+
+.cta-play-btn {
+    padding: 55px 0;
+    @include sm {
+        padding: 20px 0;
+    }
+    .discount-wrapp {
+        width: 120px;
+        height: 120px;
+        background-image: url('../img/shape/circle-shape.png');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include sm {
+            display: block;
+            margin: auto;
+        }
+
+        .play-btn {
+            z-index: 3;
+
+            >i {
+                --icon-size: 60px;
+                font-size: 20px;
+                background-color: #121212;
+                border: 1px solid rgba(201, 243, 29, 0.14);
+                color: $theme-color;
+
+            }
+        }
+    }
+
+    .discount-tag {
+        color: $white-color;
+        font-size: 10px;
+        min-height: 120px;
+        min-width: 120px;
+        position: relative;
+        z-index: 2;
+
+        span {
+            --rotate-letter: 8deg;
+            min-height: 60px;
+            position: absolute;
+            min-width: 60px;
+            text-transform: lowercase;
+            left: 14px;
+            top: -1px;
+        }
+    }
+}
+
+/* cta 4 end ---------------------*/
+
+/* cta 2 start ---------------------*/
+
+
+.cta-title-area {
+    .sec-title {
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 64px;
+        color: $white-color;
+
+        @include lg {
+            font-size: 44px;
+            line-height: 54px;
+        }
+
+        @include sm {
+            font-size: 34px;
+            line-height: 44px;
+        }
+
+        @include xs {
+            font-size: 25px;
+            line-height: 35px;
+        }
+    }
+}
+
+.cta-wrapp {
+    position: relative;
+
+    .cta-shape1 {
+        position: absolute;
+        right: -29%;
+        top: 20%;
+        width: 644px;
+        height: 644px;
+        border-radius: 50%;
+        background: $theme-color;
+        opacity: 0.1;
+
+        @include xxl {
+            right: -21%;
+        }
+
+    }
+
+    .cta-shape2 {
+        position: absolute;
+        right: -22%;
+        top: 28%;
+        width: 586px;
+        height: 586px;
+        border-radius: 50%;
+        background: $theme-color;
+        opacity: 0.1;
+
+        @include xxl {
+            right: -21%;
+        }
+
+    }
+
+    .cta-shape3 {
+        position: absolute;
+        right: -16%;
+        top: 36%;
+        width: 526px;
+        height: 526px;
+        border-radius: 50%;
+        background: $theme-color;
+        opacity: 0.1;
+
+        @include xxl {
+            right: -15%;
+        }
+
+    }
+}
+
+.cta-image5 {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    min-width: 648px;
+    height: 599px;
+
+    @include sm {
+        min-width: 100%;
+        height: 100%;
+    }
+
+    img {
+        margin-top: 15px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        clip-path: path("M0 139.68V549C0 576.614 22.3858 599 50 599H503.51C515.442 599 526.98 594.733 536.041 586.97L630.532 506.013C641.619 496.514 648 482.643 648 468.043V50C648 22.3858 625.614 0 598 0H162.491C151.167 0 140.178 3.84425 131.323 10.9035L18.8316 100.584C6.93147 110.071 0 124.461 0 139.68Z");
+        background-color: $theme-color;
+        z-index: -1;
+
+        @include lg {
+            clip-path: none;
+            border-radius: 30px;
+        }
+    }
+}
+
+.cta-hiring {
+    position: absolute;
+    top: 28px;
+    right: 36px;
+    width: 259px;
+    height: 151px;
+    padding: 40px 0px 40px 80px;
+    text-align: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    @include xl {
+        right: 80px;
+    }
+
+    @include xs {
+        right: 10px;
+    }
+
+    .box-subtitle {
+        font-family: $title-font;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        color: $title-color;
+    }
+
+    .box-title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 34px;
+        text-transform: capitalize;
+    }
+}
+
+.th-experience {
+    background-color: $white-color;
+    box-shadow: 0px 10px 30px rgba(72, 72, 72, 0.2);
+    border-radius: 30px;
+    padding: 23px;
+    text-align: center;
+    display: inline-block;
+    max-width: 168px;
+    position: absolute;
+    left: -50px;
+    bottom: 30px;
+
+    @include xs {
+        left: 0;
+        bottom: 0;
+    }
+
+    .experience-year {
+        font-size: 36px;
+        line-height: 36px;
+        margin-bottom: 0;
+        color: $theme-color;
+    }
+
+    .experience-text {
+        font-weight: 500;
+        margin-bottom: -0.3rem;
+    }
+}
+
+/* cta 2 end ---------------------*/
+
+.download-area {
+    background-color: #0A0A0A;
+}
+
+.download-btn {
+    gap: 24px;
+}
