@@ -87,7 +87,8 @@ Version: 1.0.0
 /*------------------- 1.3. Variable-------------------*/
 :root {
   /* --theme-color: #FED91F; */
-  --theme-color: #1c6b95;
+  /* --theme-color: #1c6b95; */
+  --theme-color: #76abd5;
   --theme-color2: #F93E5E;
   --title-color: #121212;
   --body-color: #797E88;
@@ -2268,10 +2269,10 @@ textarea.is-invalid {
   padding-top: 40px;
   display: block;
   text-align: center;
-  background-color: var(--title-color);
+  /* background-color: var(--title-color); */
 }
 
-.th-menu-wrapper .mobile-logo svg {
+.th-menu-wrapper .mobile-logo img {
   max-width: 185px;
 }
 
@@ -9067,6 +9068,7 @@ blockquote.has-very-dark-gray-color {
 
 .blog-single .blog-img img {
   border-radius: 30px;
+  width: 100%;
 }
 
 .blog-single .blog-img .slick-arrow {
@@ -23644,7 +23646,7 @@ span.select2-selection.select2-selection--single:focus {
 
 .service-process {
   background-color: var(--white-color);
-  padding: 0 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
   border: 1px solid #797E88;
   border-radius: 20px;
   position: relative;
