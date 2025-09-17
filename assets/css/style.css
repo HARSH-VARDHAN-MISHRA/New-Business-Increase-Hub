@@ -8191,6 +8191,9 @@ ol.widget_recent_comments,
 .th-widget-contact .info-box .box-icon {
   min-width: 16px;
 }
+.th-widget-contact .info-box .box-icon i {
+  color: var(--theme-color);
+}
 
 .th-widget-contact .info-box .box-link {
   color: var(--body-color);
